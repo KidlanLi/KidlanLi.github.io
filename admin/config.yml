@@ -115,8 +115,8 @@ collections:
     name: role
     required: false
     widget: string
-  - default: avat
-    label: Avatar (upload an image named `avat.jpg/png`)
+  - default: avatar
+    label: Avatar (upload an image named `avatar.jpg/png`)
     media_library:
       config:
         multiple: false
