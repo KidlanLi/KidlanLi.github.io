@@ -1,0 +1,24 @@
+---
+---
+
+@inproceedings{10.1145/3552326.3587446,
+author = {Qiu, Ziyue and Yang, Juncheng and Zhang, Juncheng and Li, Cheng and Ma, Xiaosong and Chen, Qi and Yang, Mao and Xu, Yinlong},
+title = {FrozenHot Cache: Rethinking Cache Management for Modern Hardware},
+year = {2023},
+isbn = {9781450394871},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3552326.3587446},
+doi = {10.1145/3552326.3587446},
+abstract = {Caching is crucial for accelerating data access, employed as a ubiquitous design in modern systems at many parts of computer systems. With increasing core count, and shrinking latency gap between cache and modern storage devices, hit-path scalability becomes increasingly critical. However, existing production in-memory caches often use list-based management with promotion on each cache hit, which requires extensive locking and poses a significant overhead for scaling beyond a few cores. Moreover, existing techniques for improving scalability either (1) only focus on the indexing structure and do not improve cache management scalability, or (2) sacrifice efficiency or miss-path scalability.Inspired by highly skewed data popularity and short-term hotspot stability in cache workloads, we propose Frozen-Hot, a generic approach to improve the scalability of list-based caches. FrozenHot partitions the cache space into two parts: a frozen cache and a dynamic cache. The frozen cache serves requests for hot objects with minimal latency by eliminating promotion and locking, while the latter leverages the existing cache design to achieve workload adaptivity. We built FrozenHot as a library that can be easily integrated into existing systems. We demonstrate its performance by enabling FrozenHot in two production systems: HHVM and RocksDB using under 100 lines of code. Evaluated using production traces from MSR and Twitter, FrozenHot improves the throughput of three baseline cache algorithms by up to 551%. Compared to stock RocksDB, FrozenHot-enhanced RocksDB shows a higher throughput on all YCSB workloads with up to 90% increase, as well as reduced tail latency.},
+booktitle = {Proceedings of the Eighteenth European Conference on Computer Systems},
+pages = {557–573},
+numpages = {17},
+keywords = {concurrency algorithm, storage, performance scalability, caching},
+location = {Rome, Italy},
+series = {EuroSys '23},
+pdf = {https://dl.acm.org/doi/abs/10.1145/3552326.3587446},
+code = {https://github.com/ziyueqiu/FrozenHot},
+preview = {FrozenHot-fig.png},
+journal = {Proceedings of the Eighteenth European Conference on Computer Systems}
+}
